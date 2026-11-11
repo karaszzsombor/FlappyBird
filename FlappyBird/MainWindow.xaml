@@ -7,13 +7,12 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800" KeyDown="Window_KeyDown">
     <Grid>
-        <Canvas>
+        <Canvas x:Name="MyCanvas">
             <Image x:Name="bird"  Height="50" Width="50" Canvas.Left="153" Canvas.Top="42" Source="https://toppng.com/public/uploads/preview/flappy-bird-sprite-11549936843rfq2kg39db.png">
                 <Image.RenderTransform>
                     <RotateTransform x:Name="birdRotate" Angle="0" CenterX="25" CenterY="25"/>
                 </Image.RenderTransform>
             </Image>
-
         </Canvas>
 
     </Grid>
