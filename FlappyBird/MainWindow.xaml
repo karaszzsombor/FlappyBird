@@ -7,13 +7,28 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800" KeyDown="Window_KeyDown">
     <Grid>
-        <Canvas x:Name="MyCanvas">
-            <Image x:Name="bird"  Height="50" Width="50" Canvas.Left="153" Canvas.Top="42" Source="https://toppng.com/public/uploads/preview/flappy-bird-sprite-11549936843rfq2kg39db.png">
+        <Canvas x:Name="MyCanvas" Background="#0099CC">
+            <Image x:Name="layer2" Stretch="Fill" Width="800" Height="450" Source="/Assets/layer2_felho_epulet.png" Canvas.Left="0" Canvas.Top="0"/>
+            <Image x:Name="layer22" Stretch="Fill" Width="800" Height="450" Source="/Assets/layer2_felho_epulet.png" Canvas.Left="800"/>
+            <Image x:Name="layer1" Stretch="Fill" Width="800" Height="450" Source="/Assets/layer1_fold.png" Canvas.Left="0" Canvas.Top="0"/>
+            <Image x:Name="layer12" Stretch="Fill" Width="800" Height="450" Source="/Assets/layer1_fold.png" Canvas.Left="800" Canvas.Top="0"/>
+
+
+            <Image x:Name="bird" Stretch="Fill" Height="50" Width="50" Canvas.Left="153" Canvas.Top="42" Source="https://www.pngall.com/wp-content/uploads/15/Flappy-Bird-PNG-Photos.png">
                 <Image.RenderTransform>
                     <RotateTransform x:Name="birdRotate" Angle="0" CenterX="25" CenterY="25"/>
                 </Image.RenderTransform>
             </Image>
+            <Label x:Name="points_cnt" Content="0"  Canvas.Left="382" Canvas.Top="177" Width="282" Height="80" FontSize="48" HorizontalAlignment="Left" VerticalAlignment="Center" FontFamily="Vivaldi"/>
         </Canvas>
+        <Grid x:Name="StartScreen" Background="#0099CC">
+            <Image x:Name="bglayer2" Stretch="Fill" Width="800" Height="450" Source="/Assets/layer2_felho_epulet.png" Canvas.Left="0" Canvas.Top="0"/>
+            <Image x:Name="bglayer1" Stretch="Fill" Width="800" Height="450" Source="/Assets/layer1_fold.png" Canvas.Left="0" Canvas.Top="0"/>
 
+            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                <TextBlock Text="FlappyBird" FontFamily="Vivaldi" TextAlignment="Center" FontSize="50" Foreground="Yellow"/>
+                <Button x:Name="Start_btn" Content="Start" Height="59" Width="106" Margin="0,100,0,0" Click="Start_btn_Click" FontFamily="Vivaldi" FontSize="36" Background="GreenYellow"  />
+            </StackPanel>
+        </Grid>
     </Grid>
 </Window>
